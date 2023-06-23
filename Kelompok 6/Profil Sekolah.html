@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMK NEGERI 1 PONTIANAK</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css" />
+</head>
+
+<body>
+  <!-- navigasi -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SMK NEGERI 1 PONTIANAK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#sejarah sekolah">Sekolah</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#identitas sekolah">SMK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#jurusan">Jurusan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tim">TIM </a>
+          </li>
+          <li class="nav-item">
+            <button id="themeButton">Tema</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- banner -->
+  <div class="sliderimg">
+    <div class="arrow l" onclick="prev()">
+      <img src="1.jpg" alt="l">
+    </div>
+    <div class="slide slide-1">
+      <div class="caption">
+        <h3>SELAMAT DATANG</h3>
+        <p>SMK 1 PONTIANAK</p>
+      </div>
+    </div>
+    <div class="slide slide-2">
+      <div class="caption">
+        <h3>SELAMAT DATANG</h3>
+        <p>SMK 1 PONTIANAK</p>
+      </div>
+    </div>
+    <div class="slide slide-3">
+      <div class="caption">
+        <h3>SELAMAT DATANG</h3>
+        <p>SMK 1 PONTIANAK</p>
+      </div>
+    </div>
+    <div class="arrow r" onclick="next()">
+      <img src="1.jpg" alt="r">
+    </div>
+  </div>
+
+  <script>
+    let slide = document.querySelectorAll('.slide');
+    var current = 0;
+
+    function cls() {
+      for (let i = 0; i < slide.length; i++) {
+        slide[i].style.display = 'none';
+      }
+    }
+
+    function next() {
+      cls();
+      if (current === slide.length - 1) current = -1;
+      current++;
+
+      slide[current].style.display = 'block';
+      slide[current].style.opacity = 0.4;
+
+      var x = 0.4;
+      var intX = setInterval(function () {
+        x += 0.1;
+        slide[current].style.opacity = x;
+        if (x >= 1) {
+          clearInterval(intX);
+          x = 0.4;
+        }
+      }, 100);
+
+    }
+
+    function prev() {
+      cls();
+      if (current === 0) current = slide.length;
+      current--;
+
+      slide[current].style.display = 'block';
+      slide[current].style.opacity = 0.4;
+
+      var x = 0.4;
+      var intX = setInterval(function () {
+        x += 0.1;
+        slide[current].style.opacity = x;
+        if (x >= 1) {
+          clearInterval(intX);
+          x = 0.4;
+        }
+      }, 100);
+
+    }
+
+    function start() {
+      cls();
+      slide[current].style.display = 'block';
+    }
+    start();
+  </script>
+
+  <!-- SEJARAH SEKOLAH -->
+  <section id="sejarah sekolah">
+    <div class="container-fluid pt-5 pb-5">
+      <div class="container">
+        <h2 class="display-3 text-center" id="sejarah sekolah"><b>Sekolah</b></h2>
+        <div class="clearfix pt-5">
+          <p style="text-align: justify;">
+            Sekolah adalah sebuah institusi atau lembaga pendidikan formal yang memiliki tujuan utama untuk menyediakan
+            dan memfasilitasi proses pembelajaran kepada siswa atau peserta didik. Sekolah merupakan tempat di mana
+            siswa
+            memperoleh pendidikan, pengetahuan, keterampilan, dan pengalaman yang dibutuhkan untuk mempersiapkan mereka
+            dalam
+            kehidupan sehari-hari dan masa depan.Sekolah umumnya memiliki kurikulum yang telah ditetapkan oleh otoritas
+            pendidikan setempat atau pemerintah, yang
+            mencakup berbagai mata pelajaran seperti matematika, bahasa, sains, sejarah, seni, dan olahraga. Selain itu,
+            sekolah juga menyediakan kegiatan ekstrakurikuler seperti klub, organisasi siswa, dan kegiatan sosial untuk
+            mengembangkan bakat dan minat siswa di luar pembelajaran akademik.Di dalam sekolah, terdapat guru atau
+            pendidik
+            yang bertugas memberikan pengajaran dan bimbingan kepada siswa.
+            Mereka membantu siswa dalam pemahaman konsep, memberikan tugas, mengadakan ujian, dan memberikan umpan balik
+            serta
+            evaluasi atas kemajuan belajar siswa. Selain itu, sekolah juga memiliki peraturan dan aturan tata tertib
+            yang
+            harus diikuti oleh siswa guna menjaga disiplin dan lingkungan belajar yang kondusif.Sekolah dapat beragam
+            jenisnya, termasuk sekolah dasar, sekolah menengah pertama, sekolah menengah atas, sekolah
+            kejuruan, dan perguruan tinggi. Masing-masing jenjang sekolah memiliki fokus dan tujuan pembelajaran yang
+            berbeda
+            sesuai dengan tingkat perkembangan dan kebutuhan siswa pada setiap tahap pendidikan.Penting untuk dicatat
+            bahwa
+            definisi dan karakteristik sekolah dapat bervariasi antara negara dan sistem
+            pendidikan, tergantung pada kebijakan dan regulasi pendidikan setempat.
+          </p>
+        </div>
+      </div>
+
+      <!-- IDENTITAS SEKOLAH -->
+      <section id="identitas sekolah">
+        <div class="container-fluid layanan pt-5 pb-5">
+          <div class="container text-center">
+            <h1 class="display-3" id="identitas sekolah"><b>SMK</b></h1>
+            <p style="text-align: justify;">
+              Sekolah Menengah Kejuruan (SMK) adalah salah satu bentuk satuan pendidikan formal yang menyelenggarakan
+              pendidikan kejuruan pada jenjang pendidikan menengah yang mempersiapkan peserta didik terutama untuk
+              bekerja di bidang tertentu. Siswa dapat melanjutkan pendidikan SMK setelah menyelesaikan pendidikan di
+              tingkat Sekolah Menengah Pertama atau sederajat.
+
+              Masa studi siswa jenjang SMK dilaksanakan selama tiga sampai empat tahun. SMK yang menerapkan masa studi
+              pembelajaran selama empat tahun, yang terbagi menjadi tiga tahun masa studi di sekolah dan satu tahun di
+              industri jurusan terkait.
+
+              Penyelenggara pendidikan terbagi menjadi dua yaitu negeri dan swasta. Ada beberapa jurusan yang biasanya
+              diminati oleh calon siswa SMK, di antaranya adalah Jurusan Multimedia, Animasi, Administrasi, Akuntansi,
+              Farmasi, Pariwisata, Pelayaran, Teknik Mesin, Tata Boga, Elektro dan sebagainya.
+
+
+            </p>
+
+            <div class="container-fluid pt-5 pb-5">
+              <div class="container text-center">
+                <div class="row pt-4 gx-4 gy-4">
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/kantor.jpg" alt="">
+                      <div class="card-body">
+                        <a href="kantor.html">
+                          <h5 class="link">KANTOR</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/halaman.jpg" alt="">
+                      <div class="card-body">
+                        <a href="halaman.html">
+                          <h5 class="link">HALAMAN</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/kelas.jpg" alt="">
+                      <div class="card-body">
+                        <a href="kelas.html">
+                          <h5 class="link">KELAS</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/lab1.jpg" alt="">
+                      <div class="card-body">
+                        <a href="lab1.html">
+                          <h5 class="link">LAB1</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/aula.jpg" alt="">
+                      <div class="card-body">
+                        <a href="aula.html">
+                          <h5 class="link">AULA</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card crop-img">
+                      <img src="gambar/lab2.jpg" alt="">
+                      <div class="card-body">
+                        <a href="lab2.html">
+                          <h5 class="link">LAB2</h5>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+      </section>
+
+      <!-- JURUSAN -->
+      <section id="jurusan">
+        <div class="container-fluid pt-5 pb-5 ">
+          <div class="container text-center">
+            <h2 class="display-3" id="jurusan"><b>Jurusan</b></h2>
+            <p style="text-align: justify;">
+              Jurusan adalah istilah yang digunakan dalam konteks pendidikan untuk merujuk pada bidang atau disiplin
+              ilmu tertentu yang dipelajari oleh mahasiswa di perguruan tinggi atau universitas. Setiap jurusan memiliki
+              fokus belajar yang khusus dan sering kali berhubungan dengan bidang pekerjaan atau karier tertentu.
+
+              Misalnya, beberapa contoh jurusan di perguruan tinggi adalah ilmu komputer, ilmu ekonomi, kedokteran,
+              hukum, arsitektur, dan psikologi. Ketika mahasiswa memilih jurusan, mereka akan mempelajari mata pelajaran
+              yang berhubungan dengan bidang tersebut selama masa studi mereka. Jurusan sering kali memiliki kurikulum
+              khusus yang mencakup mata pelajaran inti dan pilihan yang mendalam dalam bidang tersebut.
+
+              Pemilihan jurusan biasanya didasarkan pada minat, bakat, dan tujuan karier seseorang. Mahasiswa akan
+              memilih jurusan yang sesuai dengan minat dan ambisi mereka untuk mendapatkan pengetahuan dan keterampilan
+              yang diperlukan di bidang tersebut. Setelah lulus, mahasiswa dapat melanjutkan karier mereka di bidang
+              terkait atau melanjutkan studi ke jenjang pendidikan yang lebih tinggi dalam jurusan yang sama atau
+              berbeda.
+            </p>
+            <div class="row pt-4 gx-4 gy-4">
+              <div class="col-md-4">
+                <div class="card crop-img kelas">
+                  <img src="gambar/akuntansi.jpg" class="card-img-top" width="200" height="200" />
+                  <div class="card-body">
+                    <h5 class="card-title">AKUNTANSI</h5>
+                    <p class="card-text" style="text-align: justify;">
+                      Jurusan Akuntansi adalah sebuah program studi atau jurusan yang fokus pada studi dan penerapan
+                      ilmu akuntansi. Ilmu akuntansi sendiri berhubungan dengan pengukuran, pengelolaan, dan penyajian
+                      informasi keuangan dalam suatu entitas bisnis atau organisasi.
+
+                      Siswa yang mengambil jurusan Akuntansi akan mempelajari berbagai aspek akuntansi, seperti
+                      pembukuan, pelaporan keuangan, audit, perpajakan, analisis keuangan, dan sistem informasi
+                      akuntansi. Mereka akan belajar mengenai prinsip-prinsip akuntansi, regulasi dan standar akuntansi
+                      yang berlaku, serta teknik dan metode pengukuran dan pelaporan keuangan.
+
+                      Tujuan utama dari jurusan Akuntansi adalah menghasilkan lulusan yang memiliki pengetahuan dan
+                      keterampilan yang diperlukan untuk mengelola dan menginterpretasikan informasi keuangan secara
+                      akurat dan efektif. Lulusan jurusan ini biasanya dapat bekerja di berbagai bidang, termasuk
+                      akuntansi publik, industri, perbankan, konsultansi, serta sektor publik seperti lembaga pemerintah
+                      dan badan pengawas keuangan.
+
+                      Dalam dunia bisnis yang kompleks saat ini, peran akuntan sangat penting untuk membantu perusahaan
+                      atau organisasi dalam mengelola keuangan mereka dengan baik, memastikan kepatuhan terhadap
+                      peraturan perpajakan dan keuangan, serta menyediakan informasi yang akurat dan relevan bagi para
+                      pemangku kepentingan. Jurusan Akuntansi memberikan landasan yang kuat bagi siswa yang tertarik
+                      untuk berkarir di bidang ini.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card crop-img kelas">
+                  <img src="gambar/pemasaran.jpeg" class="card-img-top" width="200" height="200" />
+                  <div class="card-body">
+                    <h5 class="card-title">MANAJEMEN PEMASARAN</h5>
+                    <p class="card-text" style="text-align: justify;">
+                      Jurusan Manajemen Pemasaran adalah program studi atau jurusan yang fokus pada studi dan
+                      penerapan prinsip-prinsip manajemen dalam konteks pemasaran. Pemasaran adalah salah satu fungsi
+                      penting dalam bisnis yang berhubungan dengan kegiatan mengidentifikasi, memahami, dan memenuhi
+                      kebutuhan serta keinginan pelanggan.
+
+                      Mahasiswa yang mengambil jurusan Manajemen Pemasaran akan mempelajari berbagai konsep, strategi,
+                      dan
+                      teknik yang terkait dengan pemasaran. Mereka akan belajar mengenai perilaku konsumen, riset pasar,
+                      pengembangan produk, branding, promosi, distribusi, harga, dan manajemen hubungan pelanggan.
+                      Selain
+                      itu, juga akan dipelajari aspek-aspek manajemen umum seperti manajemen operasi, manajemen
+                      keuangan,
+                      manajemen sumber daya manusia, dan manajemen strategis.
+
+                      Tujuan utama dari jurusan Manajemen Pemasaran adalah menghasilkan lulusan yang memiliki pemahaman
+                      mendalam tentang konsep pemasaran, strategi pemasaran yang efektif, dan kemampuan untuk menerapkan
+                      pengetahuan tersebut dalam berbagai konteks bisnis. Lulusan jurusan ini biasanya dapat bekerja di
+                      bidang pemasaran dan penjualan di berbagai jenis industri, termasuk perusahaan manufaktur, ritel,
+                      jasa, periklanan, dan perusahaan teknologi. Mereka juga dapat menjadi pengusaha atau berkarir di
+                      bidang konsultasi pemasaran.
+
+                      Dalam era digital dan globalisasi saat ini, peran manajemen pemasaran semakin penting dalam
+                      mencapai
+                      keberhasilan bisnis. Jurusan Manajemen Pemasaran memberikan landasan yang kuat bagi mahasiswa yang
+                      tertarik untuk memahami dan menguasai aspek-aspek pemasaran yang kompleks, termasuk penggunaan
+                      teknologi dan media sosial dalam strategi pemasaran.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card crop-img kelas">
+                  <img src="gambar/usaha.jpg" class="card-img-top" width="200" height="200" />
+                  <div class="card-body">
+                    <h5 class="card-title">USAHA JASA PARIWISATA</h5>
+                    <p class="card-text" style="text-align: justify;">
+                      1. Jasa biro perjalanan wisata adalah kegiatan usaha yang bersifat komersial yang mengatur,
+                      menyediakan dan menyelenggarakan pelayanan bagi seseorang, atau sekelompok orang untuk melakukan
+                      perjalanan dengan tujuan utama untuk berwisata.
+                    </p>
+                    <p class="card-text" style="text-align: justify;">
+                      2. Jasa agen perjalanan wisata adalah badan usaha yang menyelenggarakan usaha perjalanan yang
+                      bertindak sebagai perantara di dalam menjual dan atau mengurus jasa untuk melakukan perjalanan;
+                      Usaha jasa pramuwisata adalah kegiatan usaha bersifat komersial yang mengatur, mengkoordinir dan
+                      menyediakan tenaga pramuwisata untuk memberikan pelayanan bagi seseorang atau kelompok orang yang
+                      melakukan perjalanan wisata.
+                    </p>
+                    <p class="card-text" style="text-align: justify;">
+                      3. Usaha jasa konvensi, perjalanan insentif dan pameran adalah usaha dengan kegiatan pokok
+                      memberikan jasa pelayanan bagi satu pertemuan sekelompok orang (misalnya negarawan, usahawan,
+                      cendekiawan)
+                      untuk membahas masalah-masalah yang berkaitan dengan kepentingan bersama.
+                    </p>
+                    <p class="card-text" style="text-align: justify;">
+                      4. Jasa impresariat adalah kegiatan pengurusan penyelenggaraan hiburan baik yang mendatangkan,
+                      mengirimkan maupun mengembalikannya serta menentukan tempat, waktu dan jenis hiburan.
+                    </p>
+                    <p class="card-text" style="text-align: justify;">
+                      5. Jasa konsultasi pariwisata adalah jasa berupa saran dan nasehat yang diberikan untuk
+                      penyelesaian masalah-masalah yang timbul mulai dan penciptaan gagasan, pelaksanaan operasinya dan
+                      disusun
+                      secara sistematis berdasarkan disiplin ilmu yang diakui serta disampaikan secara lisan, tertulis
+                      maupun gambar oleh tenaga ahli profesional.
+                    </p>
+                    <p class="card-text" style="text-align: justify;">
+                      6. Jasa informasi pariwisata adalah usaha penyediaan informasi, penyebaran dan pemanfaatan
+                      informasi kepariwisataan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="script.js"></script>
+
+      <footer style="background-color: #f2f2f2; padding: 20px;">
+        <p style="color: #333; text-align: center;">Hak Cipta &copy; 2023 kamekweb. Semua hak dilindungi.</p>
+        <div style="text-align: center;">
+          <a href="#" target="_blank" style="color: #666; text-decoration: none; margin-right: 10px;"><i
+              class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank" style="color: #666; text-decoration: none; margin-right: 10px;"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" style="color: #666; text-decoration: none; margin-right: 10px;"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+        <p style="color: #666; text-align: center;">Kontak: info@kelompok6.com</p>
+      </footer>
+
+
+</body>
+
+</html>

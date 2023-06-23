@@ -1,0 +1,67 @@
+.lingkaran {
+  display: inline-block;
+  border-radius: 50%;
+  width: 150px;
+  margin: auto;
+  height: 150px;
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.lingkaran i {
+  position: relative;
+  top: 30px;
+}
+
+.crop-img {
+  object-fit: cover;
+}
+
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #333333;
+}
+
+
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dark,
+.kelas {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+h1,
+p {
+  margin: 10px;
+
+}
+
+button {
+  padding: 10px;
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+  transform: translate(0, -3px);
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
